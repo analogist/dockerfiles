@@ -1,9 +1,10 @@
-FROM alpine:3.9 as builder
+FROM alpine:latest as builder
 LABEL maintainer "James Wu <contact@analogist.net>"
 
 RUN apk add --no-cache \
         g++ \
         libsodium-dev \
+        libsodium-static \
         cmake \
         make \
         git
